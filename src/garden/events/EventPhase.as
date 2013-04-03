@@ -1,3 +1,7 @@
+/*
+	Copyright (c) 2013 Susisu
+	see also: LICENSE
+*/
 package garden.events
 {
 	

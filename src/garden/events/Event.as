@@ -1,4 +1,8 @@
-﻿package garden.events
+﻿/*
+	Copyright (c) 2013 Susisu
+	see also: LICENSE
+*/
+package garden.events
 {
 	
 	public class Event extends Object

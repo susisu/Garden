@@ -22,7 +22,7 @@ package garden.utils
 		
 		public function get value():Object
 		{
-			return _func();
+			return _func.call(null);
 		}
 		
 		public function notifyChange():void

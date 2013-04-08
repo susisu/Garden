@@ -1,5 +1,5 @@
 ﻿/*
-	Copyright (c) 2013 Susisu
+	Copyright(C) 2013 Susisu
 	see also: LICENSE
 */
 package garden.events
@@ -137,7 +137,7 @@ package garden.events
 								}
 								else
 								{
-									listenerFunc(event);
+									listenerFunc.call(null,event);
 								}
 								
 								if(event._stopsImmediatePropagation){
@@ -172,7 +172,7 @@ package garden.events
 							}
 							else
 							{
-								listenerFunc(event);
+								listenerFunc.call(null,event);
 							}
 							
 							if(event._stopsImmediatePropagation)
@@ -206,7 +206,7 @@ package garden.events
 								}
 								else
 								{
-									listenerFunc(event);
+									listenerFunc.call(null,event);
 								}
 								
 								if(event._stopsImmediatePropagation)
@@ -240,7 +240,7 @@ package garden.events
 						}
 						else
 						{
-							listenerFunc(event);
+							listenerFunc.call(null,event);
 						}
 						
 						if(event._stopsImmediatePropagation)

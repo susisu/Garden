@@ -1,5 +1,5 @@
 /*
-	Copyright (c) 2013 Susisu
+	Copyright(C) 2013 Susisu
 	see also: LICENSE
 */
 package garden.utils
@@ -20,9 +20,9 @@ package garden.utils
 		
 		public function getValue():Object
 		{
-			for(var obj:Object in _dictionary)
+			for(var value:Object in _dictionary)
 			{
-				return obj;
+				return value;
 			}
 			return null;
 		}

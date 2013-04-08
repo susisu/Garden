@@ -1,5 +1,5 @@
 ﻿/*
-	Copyright (c) 2013 Susisu
+	Copyright(C) 2013 Susisu
 	see also: LICENSE
 */
 package garden.events
@@ -7,6 +7,14 @@ package garden.events
 	
 	public class Event extends Object
 	{
+		
+		public static const ADDED:String="added";
+		public static const ADDED_TO_WINDOW:String="addedToWindow";
+		public static const CHANGE:String="change";
+		public static const CLOSE:String="close";
+		public static const REMOVED:String="removed";
+		public static const REMOVED_FROM_WINDOW:String="removedFromWindow";
+		public static const RESIZE:String="resize";
 		
 		internal var _currentTarget:Object;
 		internal var _eventPhase:uint;

@@ -17,7 +17,7 @@ package garden.utils
 		{
 			super();
 			
-			_func=func;
+			_func = func;
 		}
 		
 		public function get value():Object

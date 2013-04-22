@@ -8,13 +8,13 @@ package garden.events
 	public class Event extends Object
 	{
 		
-		public static const ADDED:String="added";
-		public static const ADDED_TO_WINDOW:String="addedToWindow";
-		public static const CHANGE:String="change";
-		public static const CLOSE:String="close";
-		public static const REMOVED:String="removed";
-		public static const REMOVED_FROM_WINDOW:String="removedFromWindow";
-		public static const RESIZE:String="resize";
+		public static const ADDED:String = "added";
+		public static const ADDED_TO_WINDOW:String = "addedToWindow";
+		public static const CHANGE:String = "change";
+		public static const CLOSE:String = "close";
+		public static const REMOVED:String = "removed";
+		public static const REMOVED_FROM_WINDOW:String = "removedFromWindow";
+		public static const RESIZE:String = "resize";
 		
 		internal var _currentTarget:Object;
 		internal var _eventPhase:uint;
@@ -27,24 +27,24 @@ package garden.events
 		private var _defaultPrevented:Boolean;
 		private var _type:String;
 		
-		public function Event(type:String,bubbles:Boolean=false,cancelable:Boolean=false)
+		public function Event(type:String, bubbles:Boolean = false, cancelable:Boolean = false)
 		{
-			if(type==null)
+			if(type == null)
 			{
 				throw (new TypeError("'type' should not be null."));
 			}
 			
-			_type=type;
-			_bubbles=bubbles;
-			_cancelable=cancelable;
+			_type = type;
+			_bubbles = bubbles;
+			_cancelable = cancelable;
 			
-			_currentTarget=null;
-			_eventPhase=EventPhase.AT_TARGET;
-			_stopsImmediatePropagation=false;
-			_stopsPropagation=false;
-			_target=null;
+			_currentTarget = null;
+			_eventPhase = EventPhase.AT_TARGET;
+			_stopsImmediatePropagation = false;
+			_stopsPropagation = false;
+			_target = null;
 			
-			_defaultPrevented=false;
+			_defaultPrevented = false;
 		}
 		
 		public function get bubbles():Boolean
@@ -79,27 +79,27 @@ package garden.events
 		
 		public function clone():Event
 		{
-			return (new Event(_type,_bubbles,_cancelable));
+			return (new Event(_type, _bubbles, _cancelable));
 		}
 		
 		public function formatToString(className:String,...arguments):String
 		{
-			var str:String="["+className;
-			var len:int=arguments.length;
-			for(var i:int=0;i<len;i++)
+			var str:String = "[" + className;
+			var len:int = arguments.length;
+			for(var i:int = 0; i < len; i++)
 			{
-				var name:String=arguments[i];
-				var value:Object=this[name];
+				var name:String = arguments[i];
+				var value:Object = this[name];
 				if(value is String)
 				{
-					str+=" "+name+"=\""+value+"\"";
+					str += " " + name + "=\"" + value + "\"";
 				}
 				else
 				{
-					str+=" "+name+"="+value.toString();
+					str = " " + name + "=" + value.toString();
 				}
 			}
-			str+="]";
+			str += "]";
 			return str;
 		}
 		
@@ -112,24 +112,24 @@ package garden.events
 		{
 			if(_cancelable)
 			{
-				_defaultPrevented=true;
+				_defaultPrevented = true;
 			}
 		}
 		
 		public function stopImmediatePropagation():void
 		{
-			_stopsImmediatePropagation=true;
-			_stopsPropagation=true;
+			_stopsImmediatePropagation = true;
+			_stopsPropagation = true;
 		}
 		
 		public function stopPropagation():void
 		{
-			_stopsPropagation=true;
+			_stopsPropagation = true;
 		}
 		
 		public function toString():String
 		{
-			return (formatToString("Event","type","bubbles","cancelable"));
+			return (formatToString("Event", "type", "bubbles", "cancelable"));
 		}
 		
 	}

@@ -14,8 +14,8 @@ package garden.utils
 		
 		public function WeakReference(value:Object)
 		{
-			_dictionary=new Dictionary(true);
-			_dictionary[value]=null;
+			_dictionary = new Dictionary(true);
+			_dictionary[value] = null;
 		}
 		
 		public function getValue():Object

@@ -13,11 +13,11 @@ package garden.utils
 		
 		private var _value:Object;
 		
-		public function BindableVar(value:Object=null)
+		public function BindableVar(value:Object = null)
 		{
 			super();
 			
-			_value=value;
+			_value = value;
 		}
 		
 		public function get value():Object
@@ -27,7 +27,7 @@ package garden.utils
 		
 		public function set value(value:Object):void
 		{
-			_value=value;
+			_value = value;
 			dispatchEvent(new Event(Event.CHANGE));
 		}
 		
